@@ -1,0 +1,85 @@
+/* Custom styles for TinyLink */
+.truncate-url {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Loading animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Copy button states */
+.copy-btn {
+    transition: all 0.2s ease-in-out;
+}
+
+.copy-btn:hover {
+    transform: translateY(-1px);
+}
+
+.copy-btn.copied {
+    background-color: #10b981 !important;
+    color: white;
+}
+
+
+/* Toast states */
+.toast-success {
+    background-color: #10b981;
+    color: white;
+    border-color: #059669;
+}
+
+.toast-error {
+    background-color: #ef4444;
+    color: white;
+    border-color: #dc2626;
+}
+
+.toast-info {
+    background-color: #3b82f6;
+    color: white;
+    border-color: #2563eb;
+}
+
+/* Form validation */
+.input-error {
+    border-color: #ef4444 !important;
+    background-color: #fef2f2;
+}
+
+.input-success {
+    border-color: #10b981 !important;
+    background-color: #f0fdf4;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .truncate-url {
+        max-width: 200px;
+    }
+
+    .table-container {
+        font-size: 0.875rem;
+    }
+}
+
+/* Smooth transitions */
+* {
+    transition-property: color, background-color, border-color, transform;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
